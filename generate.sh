@@ -1,0 +1,1 @@
+protoc -I protoc/ --go_out=protoc/ protoc/user.proto

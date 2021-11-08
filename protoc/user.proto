@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option go_package = "protoc/userpb";
+
+message User {
+    int32 id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string username = 4;
+    Contact contact = 5;
+}
+
+message Contact {
+    int32 id = 1;
+    repeated Email_Address email_addresses = 2;
+    repeated Address addresses = 3;
+    repeated Phone phone_numbers = 4;
+}
+
+message Phone {
+    string country_code = 1;
+    string number = 2;
+    string extension = 3;
+}
+
+message Address {
+    string house_number = 1;
+    string street_number = 2;
+    string zip_code = 3;
+    string city = 4;
+    string state = 5;
+    string country = 6;
+    bool is_primary = 7;
+}
+
+message Email_Address {
+    string email_address = 1;
+    bool is_verified = 2;
+    bool is_primary = 3;
+    bool send_notifications = 4;
+    bool important_only = 5;
+}
