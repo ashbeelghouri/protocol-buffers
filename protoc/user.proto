@@ -15,7 +15,7 @@ message User {
 
 message Contact {
     int32 id = 1;
-    repeated Email_Address email_addresses = 2;
+    repeated EmailAddress email_addresses = 2;
     repeated Address addresses = 3;
     repeated Phone phone_numbers = 4;
 }
@@ -36,7 +36,7 @@ message Address {
     bool is_primary = 7;
 }
 
-message Email_Address {
+message EmailAddress {
     string email_address = 1;
     bool is_verified = 2;
     bool is_primary = 3;
